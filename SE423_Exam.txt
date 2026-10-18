@@ -1,0 +1,265 @@
+================================================================================
+SE423 Lab Exam — AI Prompt Guide
+Software Construction and Development Lab
+================================================================================
+Use when AI is allowed in the exam but you cannot photograph the paper.
+Type the question carefully, then paste the matching prompt template below.
+
+
+--------------------------------------------------------------------------------
+0. BEFORE THE EXAM (QUICK PREP)
+--------------------------------------------------------------------------------
+- Know the vocabulary: SRP, OCP, LSP, ISP, DIP, Factory, Adapter, Decorator,
+  Strategy, Observer, Command, State, Template Method, Iterator, Facade, Proxy,
+  Composite, Builder, Singleton, Prototype.
+- Default stack: Java, console app, simple classes, no frameworks unless asked.
+- Keep this file (or these templates) ready if notes/AI tools are permitted.
+
+
+--------------------------------------------------------------------------------
+1. HOW TO TYPE THE PAPER QUICKLY
+--------------------------------------------------------------------------------
+Capture in this order:
+
+  1) What they want (implement / refactor / identify violations / explain)
+  2) Domain (ride booking, hospital, food delivery, library, etc.)
+  3) Required features (bullet list)
+  4) Constraints (Java only, same behavior, no new features, etc.)
+  5) Code — only the broken/important parts (or summarize if long)
+
+If the code is long, write something like:
+
+  "I'll paste the god class / key methods. Other classes are simple data
+   holders: Patient(id,name), Doctor(...)."
+
+
+--------------------------------------------------------------------------------
+2. MASTER PROMPT TEMPLATE (USE FOR MOST QUESTIONS)
+--------------------------------------------------------------------------------
+
+You are helping me with an SE423 Software Construction lab exam.
+Language: Java. Keep it simple, compilable, console-based.
+Follow the question exactly. Do not invent extra features.
+
+QUESTION (typed from paper):
+[paste requirements / scenario]
+
+GIVEN CODE (if any):
+[paste or summarize]
+
+TASK:
+[refactor / implement pattern X / identify SOLID violations / etc.]
+
+OUTPUT FORMAT:
+1) Short list of problems / violations (with principle or pattern name)
+2) Complete refactored Java code (separate classes, clear names)
+3) 5–8 lines explaining what changed and why
+4) How to run / expected console output
+
+Constraints:
+- Same behavior as the original unless the question says otherwise
+- Prefer interfaces + constructor injection where SOLID/DIP applies
+- No comments that just restate the code
+
+
+--------------------------------------------------------------------------------
+3. EXAM OPENER (SEND THIS FIRST EVERY TIME)
+--------------------------------------------------------------------------------
+
+SE423 lab exam mode.
+Java only. Exact requirements. No extra features.
+I will type the question from a paper (no photo).
+Wait for my question, then answer in: problems → code → short explanation → requirements checklist.
+
+
+--------------------------------------------------------------------------------
+4. PROMPT BY QUESTION TYPE
+--------------------------------------------------------------------------------
+
+===== 4.1 Refactor Messy Code (Labs 1–2 style) =====
+
+Here is a poorly structured Java program for [system name].
+Refactor for: abstraction, encapsulation, high cohesion, loose coupling.
+Keep the same functionality.
+Show BEFORE problems, AFTER classes, and a short comparison.
+
+GIVEN CODE:
+[paste or summarize]
+
+
+===== 4.2 SOLID Principles (Lab 3 / Task 03 style) =====
+
+Analyze this Java code for SOLID violations.
+For each principle (SRP, OCP, LSP, ISP, DIP):
+- where it is violated
+- how you fix it
+Then give the full refactored design with interfaces and constructor injection.
+Demonstrate with a small main() that: [list required actions from paper].
+
+GIVEN CODE:
+[paste or summarize]
+
+
+===== 4.3 Design Pattern (Labs 4–6 style) =====
+
+Implement the [Factory Method / Abstract Factory / Builder / Prototype /
+Singleton / Adapter / Decorator / Facade / Composite / Proxy / Strategy /
+Observer / Command / Template Method / State / Iterator] pattern
+for this scenario: [type scenario from paper].
+
+Requirements from paper:
+- [bullet 1]
+- [bullet 2]
+- [bullet 3]
+
+Give: interfaces, concrete classes, client/main, and 3 lines on why this
+pattern fits.
+Do not mix in unrelated patterns.
+
+
+===== 4.4 Identify Problems Only (no rewrite yet) =====
+
+Do not rewrite yet.
+List design problems in this code. Tag each with:
+clean-code smell / cohesion / coupling / which SOLID principle.
+Be specific to line/method/class names I typed.
+
+GIVEN CODE:
+[paste or summarize]
+
+
+===== 4.5 Stuck Mid-Solution (smallest fix) =====
+
+My current code is below. The exam asks for [X].
+What is still wrong? Give the smallest fix only, not a full rewrite.
+
+MY CODE:
+[paste]
+
+
+===== 4.6 Make the Answer Exam-Friendly =====
+
+Use simple Java a student would write in a 2-hour lab.
+Short class names, no Lombok, no Spring, no packages unless needed.
+Prefer clarity over cleverness.
+
+
+===== 4.7 Requirements Checklist (catch missing parts) =====
+
+After the solution, check off each requirement from the question
+and say DONE or MISSING for each bullet.
+
+
+--------------------------------------------------------------------------------
+5. PRACTICAL TYPING TIPS UNDER TIME PRESSURE
+--------------------------------------------------------------------------------
+Long code dump:
+  → Paste the god class first; summarize DTOs in one line.
+
+Diagram on paper:
+  → Describe it in text, e.g. "OrderService → PaymentMethod ← Card, Cash"
+
+Multiple parts (A/B/C):
+  → One prompt per part (Part A identify, Part B refactor)
+
+Unclear wording:
+  → "Interpret the question as: … Confirm before coding."
+
+Need explanation marks:
+  → "Write the explanation as 4 short exam-style paragraphs."
+
+
+--------------------------------------------------------------------------------
+6. GOOD VS BAD PROMPTS
+--------------------------------------------------------------------------------
+WEAK:
+  "Solve this."
+
+STRONG:
+  "Refactor this Ride Booking Java for encapsulation and cohesion.
+   Features: book, fare, display, update status. Same behavior.
+   Give classes + 6-line explanation."
+
+
+--------------------------------------------------------------------------------
+7. FILLED PRACTICE EXAMPLES (FOR TYPING SPEED)
+--------------------------------------------------------------------------------
+
+===== 7.1 Example — Ride Booking (Task 02 style) =====
+
+SE423 lab exam mode. Java only. Exact requirements. No extra features.
+
+QUESTION:
+Refactor a Ride Booking System. Features:
+- Enter pickup and destination
+- Select ride type
+- Calculate fare
+- Book a ride
+- Display ride details
+- Update ride status
+
+Apply abstraction, encapsulation, and high cohesion.
+Submit/show initial vs refactored style: give the refactored version plus
+explanation of problems fixed.
+
+TASK:
+Provide a simple initial god-class sketch briefly, then the full refactored
+Java code, then a short explanation covering abstraction, encapsulation,
+and cohesion.
+
+
+===== 7.2 Example — Hospital SOLID (Task 03A style) =====
+
+SE423 lab exam mode. Java only. Exact requirements. No extra features.
+
+QUESTION:
+Refactor a Hospital Management System using all SOLID principles.
+System must support:
+- Register patients
+- Schedule appointments
+- Generate bills
+- Process different payment methods
+- Send notifications
+- Store patient records
+
+Apply SRP, OCP, LSP, ISP, DIP with constructor injection.
+Demonstrate with main(): register, schedule, bill, pay, notify.
+
+GIVEN CODE:
+[paste the HospitalManagementSystem god class from the paper]
+
+OUTPUT:
+1) Violations per SOLID principle
+2) Full refactored code
+3) Short explanation per principle
+4) Requirements checklist DONE/MISSING
+
+
+===== 7.3 Example — Strategy Pattern (Lab 06 style) =====
+
+SE423 lab exam mode. Java only. Exact requirements. No extra features.
+
+QUESTION:
+Implement the Strategy pattern for delivery fee calculation.
+- DeliveryStrategy interface with calculateFee(distance)
+- StandardDelivery and ExpressDelivery
+- DeliveryService with setStrategy() and getFee()
+- Test with distance 5
+- Also add PremiumDelivery without modifying DeliveryService
+
+Give complete Java code, main output, and 3 lines on why Strategy fits.
+
+
+--------------------------------------------------------------------------------
+8. QUICK REMINDERS DURING THE EXAM
+--------------------------------------------------------------------------------
+- Follow the paper exactly; do not invent extra features.
+- Understand enough to fix compile errors and tweak to match the paper.
+- If explanations must be handwritten, rewrite AI bullets in your own words.
+- Declare AI use if the exam rules require it.
+- After every solution, run the requirements checklist (DONE/MISSING).
+
+
+================================================================================
+End of file
+================================================================================
